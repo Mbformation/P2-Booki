@@ -1,41 +1,31 @@
 body {
     font-family: "Raleway", sans-serif;
+    margin: 0;
+}
+
+.wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 3%;
     margin-left: 3%;
     margin-right: 3%;
 }
 
-.header {
-    margin-left: 2%;
-    display: grid;
-    grid-template-columns: 50% 50%;
-  
+.logo {
+    display: flex;
+    height: 40px; 
 }
-
-#logo {
-    grid-column-start: 1;
-    justify-self: start;
-    align-self: end;
-    height: 50%;
-}
-
-.onglets-header {
-    grid-column-start: 2;
-    justify-self: end;
-    align-self: center;
-    padding-top: 3%;
-}
-
-#hébergements {
-    padding-top: 29%;
-}
-
-#activités {
-    padding-top: 29%;
-     
-}
-
 
 nav a {
+    margin: 0 10px 0 20px;
+    padding: 42px 10px 0 20px;
     text-decoration: none;
     color: black;
 }
