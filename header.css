@@ -7,25 +7,24 @@ body {
     max-width: 1400px;
     margin: 0 auto;
     box-sizing: border-box;
-    padding: 0 20px;
+    padding: 0 35px;
 }
 
 header .wrapper {
     display: flex;
     justify-content: space-between;
-    padding-top: 3%;
-    margin-left: 3%;
-    margin-right: 3%;
+    margin-top: 47px;
+    margin-left: 25px;
 }
 
 .logo {
-    display: flex;
-    height: 40px; 
+    margin-left: 10px;
+    height: 45px; 
 }
 
 nav a {
-    margin: 0 10px 0 20px;
-    padding: 42px 10px 0 20px;
+    margin-left: 15px;
+    padding: 45px 25px 0 25px;
     text-decoration: none;
     color: black;
 }
@@ -35,3 +34,13 @@ nav a:hover {
     border-top: 2px #0065FC solid;
 }
 
+.wrapper .recherche {
+    display: flex;
+    flex-direction: column;
+}
+
+.recherche div {
+    padding-top: 40px;
+    font-size: 20px;
+    font-weight: bold;
+}
