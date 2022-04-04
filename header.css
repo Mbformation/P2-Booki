@@ -34,15 +34,28 @@ nav a:hover {
     border-top: 2px #0065FC solid;
 }
 
-.recherche h1 {
+.recherche .titre {
     padding-top: 40px;
     margin: 0;
     font-size: 20px;
-    font-weight: bold;
 }
 
-.recherche h2 {
+.recherche p {
     margin-top: 5px;
     font-size:medium;
     font-weight:normal;
+}
+
+.search-bar [type=search] {
+    font-family: "Raleway";
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    border: 1px #F2F2F2 solid;
+    padding-left: 15px;
+    padding-bottom: 14px;
+}
+
+.recherche .filtre {
+    font-size: 12px;
 }
