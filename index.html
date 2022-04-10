@@ -3,7 +3,7 @@
         <head>
             <meta charset="UTF-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
             <link rel="stylesheet" href="header.css"  />
             <title>Booki</title>
@@ -26,21 +26,37 @@
                     <p>En plein centre ville ou en pleine nature</p>
                     <div class="search-bar">
                         <form method="post" action="traitement.php">
-                            <i class="fal fa-info-circle"></i>
+                            <i class="fa-solid fa-location-dot"></i>
                             <input type="search" name="search bar" placeholder="Marseille, France" />
                             <button type="submit">Rechercher</button>
                         </form>
                     </div>
                     <div class="filtre">
                         <p>Filtres</p>
-                        <p>Économique</p>
-                        <p>Familial</p>
-                        <p>Romantique</p>
-                        <p>Animaux autorisés</p>
-
-
+                        <div>
+                            <i class="fa-solid fa-money-bill-wave"></i>
+                            <input type="radio" id="Économique" name="filtre" />
+                            <label for="Économique">Économique</label>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-child-reaching"></i>
+                            <input type="radio" id="Familial" name="filtre" />
+                            <label for="Familial">Familial</label>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-heart"></i>
+                            <input type="radio" id="Romantique" name="filtre" />
+                            <label for="Romantique">Romantique</label>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-dog"></i>
+                            <input type="radio" id="Animaux autorisés" name="filtre" />
+                            <label for="Animaux autorisés">Animaux autorisés</label>
+                        </div>
                     </div>
-                    <p>Plus de 500 logements sont disponibles dans cette ville</p>
+                    <div> 
+                        <p><i class="fa-solid fa-info fa-xs"></i>Plus de 500 logements sont disponibles dans cette ville</p>
+                    </div>
                 </section>
                 
                
