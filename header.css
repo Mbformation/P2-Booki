@@ -192,6 +192,8 @@ nav a:hover {
 .hébergements-marseille .carte {
     display: flex;
     flex-direction: column;
+    text-decoration: none;
+    color: black;
     width: 236px;
     height: 189px;
     background-color: white;
