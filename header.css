@@ -33,14 +33,14 @@ nav a:hover {
     border-top: 2px #0065FC solid;
 }
 
-.recherche h1 {
+.search h1 {
     padding-top: 38px;
     margin: 0;
     font-size: 22px;
     font-weight: 600;
 }
 
-.recherche p {
+.search p {
     margin-top: 10px;
     font-size:medium;
     font-weight:normal;
@@ -72,6 +72,7 @@ nav a:hover {
 }
 
 .search-bar [type=submit] {
+    cursor: pointer;
     font-family: "Raleway";
     font-size: 18px;
     font-weight: 600;
@@ -84,20 +85,20 @@ nav a:hover {
 }
 
 
-.recherche .filtre {
+.search .filter {
     display: flex;
     align-items: baseline;
     margin-top: 30px;
     margin-left: 6px;
 }
 
-.filtre p {
+.filter p {
     font-size: 17px;
     font-weight: bold;
     margin-right: 35px;
 }
 
-.filtre div {
+.filter div {
     display: flex;
     align-items: center;
     margin-right: 22px;
@@ -112,7 +113,7 @@ nav a:hover {
     overflow: visible;
 }
 
-.filtre div i {
+.filter div i {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -124,11 +125,11 @@ nav a:hover {
     width: 49px;
     border-radius: 50%;
 }
-.filtre div:hover {
+.filter div:hover {
     color: #0065FC;
 } 
 
-.recherche div p {
+.search div p {
     display: flex;
     align-items: baseline;
     margin-top: 25px;
@@ -146,11 +147,11 @@ nav a:hover {
     margin-right: 10px;
 }
 
-.hébergements {
+.first-section .wrapper {
     display: flex;
 }
 
-.hébergements h1 {
+.first-section h1 {
     display: flex;
     justify-content: space-between;
     margin: 0;
@@ -159,7 +160,7 @@ nav a:hover {
     font-weight: 600;
 }
 
-.hébergements-marseille {
+.main-board {
     display: flex;
     flex-flow: column;
     background-color: #F2F2F2;
@@ -170,17 +171,7 @@ nav a:hover {
     border-radius: 25px;
 }
 
-.les-plus-polulaires {
-    box-sizing: border-box;
-    background-color: #F2F2F2;
-    width: 34%;
-    margin-left: 40px;
-    padding-left: 37px;
-    padding-right: 40px;
-    border-radius: 25px;
-}
-
-.hébergements-marseille .groupe-carte {
+.main-board .main-cards-layout {
     display: flex;
     flex-wrap: wrap;
     padding-top: 20px;
@@ -189,7 +180,7 @@ nav a:hover {
     align-items: space-between;
 }
 
-.hébergements-marseille .carte {
+.main-board .vertical-card {
     display: flex;
     flex-direction: column;
     text-decoration: none;
@@ -203,12 +194,12 @@ nav a:hover {
     box-shadow: 0 4px 8px 0 rgba(116, 116, 116, 0.2);
 }
 
-.carte:hover {
+.vertical-card:hover {
     color: #0065FC;
     box-shadow: 0 8px 16px 0 rgba(116, 116, 116, 0.2);
 }
 
-.carte img {
+.vertical-card img {
     height: 114px;
     width: 100%;
     object-fit: cover;
@@ -216,6 +207,8 @@ nav a:hover {
 
 .description {
     padding-left: 5%;
+    display: flex;
+    flex-direction: column;
 }
 
 .description h4 {
@@ -232,22 +225,258 @@ nav a:hover {
     margin: 0;
 }
 
-.notes{
-    display: flex;
-    align-items: center;
+.description p span {
+    font-weight: 500;
 }
 
-.notes .fa-star {
-    color:#0065FC;
-}
-.notes span .fa-star {
-color: #F2F2F2;
+.rating .fa-star {
+    color: #F2F2F2;
 }
 
-.hébergements-marseille h2 {
+.rating.stars1 i:nth-child(1) { color: #0065FC; }
+
+.rating.stars2 i:nth-child(1) { color: #0065FC; }
+.rating.stars2 i:nth-child(2) { color: #0065FC; }
+
+.rating.stars3 i:nth-child(1) { color: #0065FC; }
+.rating.stars3 i:nth-child(2) { color: #0065FC; }
+.rating.stars3 i:nth-child(3) { color: #0065FC; }
+
+.rating.stars4 i:nth-child(1) { color: #0065FC; }
+.rating.stars4 i:nth-child(2) { color: #0065FC; }
+.rating.stars4 i:nth-child(3) { color: #0065FC; }
+.rating.stars4 i:nth-child(4) { color: #0065FC; }
+
+.rating.stars5 i:nth-child(1) { color: #0065FC; }
+.rating.stars5 i:nth-child(2) { color: #0065FC; }
+.rating.stars5 i:nth-child(3) { color: #0065FC; }
+.rating.stars5 i:nth-child(4) { color: #0065FC; }
+.rating.stars5 i:nth-child(5) { color: #0065FC; }
+
+.main-board h2 a {
+    text-decoration: none;
+    color: black;
     font-size: 18px;
     font-weight: 600;
     padding-left: 5px;
-    padding-bottom: 29px;
 }
+
+.side-board {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    background-color: #F2F2F2;
+    width: 34%;
+    margin-left: 40px;
+    padding-left: 37px;
+    padding-right: 40px;
+    border-radius: 25px;
+}
+
+.side-board h1 {
+    padding-bottom: 5px;
+}
+
+.side-board .side-cards-layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 85%;
+}
+
+.side-board .horizontal-card {
+    display: flex;
+    text-decoration: none;
+    color: black;
+    width: 332px;
+    height: 133px;
+    background-color: white;
+    border-radius: 20px;
+    border: 5px solid white;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(116, 116, 116, 0.2);
+}
+
+.horizontal-card img {
+    height: 100%;
+    width: 127px;
+    object-fit: cover;
+}
+
+.horizontal-card:hover {
+    color: #0065FC;
+    box-shadow: 0 8px 16px 0 rgba(116, 116, 116, 0.2);
+}
+
+.horizontal-card .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 5px;
+    padding-right: 15px;
+}
+
+.location-price h4 {
+    font-weight: 600;
+    padding-top: 8px;
+    margin: 0;
+}
+
+.location-price p {
+    font-size: 14px;
+    font-weight: 300;
+    padding-top: 4px;
+    padding-bottom: 3px;
+    margin: 0;
+}
+
+.location-price p span {
+    font-weight: 500;
+}
+
+.second-section h1 {
+    margin: 0;
+    padding-top: 50px;
+    padding-bottom: 25px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.columns {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    height: 446px;
+}
+
+.columns img {
+    height: 95%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.container0 {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 25px;
+    width: 23%;
+    height: 100%;
+    box-shadow: 0 8px 16px 0 rgba(116, 116, 116, 0.2);
+}
+
+.container1 {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 25px;
+    width: 23%;
+    height: 53%;
+    box-shadow: 0 8px 16px 0 rgba(116, 116, 116, 0.2);
+}
+
+.container2 {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 25px;
+    width: 23%;
+    height: 37%;
+    box-shadow: 0 8px 16px 0 rgba(116, 116, 116, 0.2);
+}
+
+.container3 {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 25px;
+    width: 23%;
+    height: 100%;
+    box-shadow: 0 8px 16px 0 rgba(116, 116, 116, 0.2);
+}
+.container4 {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 25px;
+    width: 23%;
+    height: 43%;
+    box-shadow: 0 8px 16px 0 rgba(116, 116, 116, 0.2);
+}
+
+.container5 {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 25px;
+    width: 23%;
+    height: 47%;
+    box-shadow: 0 8px 16px 0 rgba(116, 116, 116, 0.2);
+}
+
+.columns h4 {
+    font-weight: 600;
+    margin: 0;
+    padding-left: 7%;
+    padding-top: 7%;
+    padding-bottom: 5%;
+}
+
+footer {
+    background-color: #F2F2F2;
+    margin-top: 4%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.wrapper .footer-layout {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    height: 161px;
+    width: 100%;
+}
+
+footer h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    padding-top: 11px;
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+    font-weight: 200;
+}
+
+.column0 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 85%;
+    width: 33%;
+}
+
+.column1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 70%;
+    width: 33%;
+    padding-left: 8px;
+}
+.column2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 70%;
+    width: 33%;
+    padding-left: 15px;
+}
+
+
 
