@@ -29,29 +29,32 @@
                             <form method="post">
                                 <i class="fa-solid fa-location-dot"></i>
                                 <input type="search" name="search bar" value="Marseille, France" />
-                                <button type="submit">Rechercher</button>
+                                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i>Rechercher</button>
                             </form>
                         </div>
-                        <div class="filter">
-                            <p>Filtres</p>
-                            <div>
-                                <i class="fa-solid fa-money-bill-wave"></i>
-                                <span>Économique</span>
-                            </div>
-                            <div>
-                                <i class="fa-solid fa-child-reaching"></i>
-                                <span>Familial</span>
-                            </div>
-                            <div>
-                                <i class="fa-solid fa-heart"></i>
-                                <span>Romantique</span>
-                            </div>
-                            <div>
-                                <i class="fa-solid fa-dog"></i>
-                                <span>Animaux autorisés</span>
+                        
+                        <div class="filter-layout">
+                            <span>Filtres</span>
+                            <div class="filter-buttons">
+                                <div>
+                                    <i class="fa-solid fa-money-bill-wave"></i>
+                                    <span>Économique</span>
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-child-reaching"></i>
+                                    <span>Familial</span>
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-heart"></i>
+                                    <span>Romantique</span>
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-dog"></i>
+                                    <span>Animaux autorisés</span>
+                                </div>
                             </div>
                         </div>
-                        <div> 
+                        <div class="info"> 
                             <p><i class="fa-solid fa-info fa-xs"></i>Plus de 500 logements sont disponibles dans cette ville</p>
                         </div>
                     </div>
@@ -123,10 +126,10 @@
                                     </div>
                                 </a>
                             </div> 
-                            <h2><a href="#">Afficher plus</a></h2>
+                            <a href="#">Afficher plus</a>
                             </div>
                         <div class="side-board">
-                            <h1>Les plus populaires<i class="fa-solid fa-arrow-trend-up"></i></h1>
+                            <h1>Les plus populaires<i class="fa-solid fa-star"></i></h1>
                             <div class="side-cards-layout">
                                 <a href="#" class="horizontal-card">
                                     <img src="images/hotel-le-soleil.jpg" alt="Hôtel Le soleil du matin">
@@ -136,7 +139,7 @@
                                             <p>Nuit à partir de 128<span>€</span></p>
                                         </div>
                                         <div class="rating stars5">
-                                            <i class="fa-solid fa-star fa-xs"></i><i class="fa-solid fa-star fa-xs"></i><i class="fa-solid fa-star fa-xs"></i><i class="fa-solid fa-star fa-xs"></i><i class="fa-solid fa-star fa-xs"></i>
+                                            <i class="fa-solid fa-star fa-2xs"></i><i class="fa-solid fa-star fa-2xs"></i><i class="fa-solid fa-star fa-2xs"></i><i class="fa-solid fa-star fa-2xs"></i><i class="fa-solid fa-star fa-2xs"></i>
                                         </div>
                                     </div>
                                 </a>
@@ -148,7 +151,7 @@
                                             <p>Nuit à partir de 71<span>€</span></p>
                                         </div>
                                         <div class="rating stars4">
-                                            <i class="fa-solid fa-star fa-xs"></i><i class="fa-solid fa-star fa-xs"></i><i class="fa-solid fa-star fa-xs"></i><i class="fa-solid fa-star fa-xs"></i><i class="fa-solid fa-star fa-xs"></i>
+                                            <i class="fa-solid fa-star fa-2xs"></i><i class="fa-solid fa-star fa-2xs"></i><i class="fa-solid fa-star fa-2xs"></i><i class="fa-solid fa-star fa-2xs"></i><i class="fa-solid fa-star fa-2xs"></i>
                                         </div>
                                     </div>
                                 </a>
@@ -160,7 +163,7 @@
                                             <p>Nuit à partir de 68<span>€</span></p>
                                         </div>
                                         <div class="rating stars4">
-                                            <i class="fa-solid fa-star fa-xs"></i><i class="fa-solid fa-star fa-xs"></i><i class="fa-solid fa-star fa-xs"></i><i class="fa-solid fa-star fa-xs"></i><i class="fa-solid fa-star fa-xs"></i>
+                                            <i class="fa-solid fa-star fa-2xs"></i><i class="fa-solid fa-star fa-2xs"></i><i class="fa-solid fa-star fa-2xs"></i><i class="fa-solid fa-star fa-2xs"></i><i class="fa-solid fa-star fa-2xs"></i>
                                         </div>
                                     </div>
                                 </a>
@@ -204,22 +207,19 @@
             <footer>
                 <div class="wrapper">
                     <div class="footer-layout">
-                        <div class="column0">
-                            <h2>À propos</h2>
-                            <a href="#">Fonctionnement du site</a>
-                            <a href="#">Conditions générales de vente</a>
-                            <a href="#">Données et confidentialité</a>
-                        </div>
-                        <div class="column1">
-                            <h2>Nos hébergements</h2>
-                            <a href="#">Charte qualité</a>
-                            <a href="#">Soumettre votre hôtel</a>
-                        </div>
-                        <div class="column2">
-                            <h2>Assistance</h2>
-                            <a href="#">Centre d'aide</a>
-                            <a href="#">Nous contacter</a>
-                        </div>
+                        <ul>À propos
+                            <li><a href="#">Fonctionnement du site</a></li>
+                            <li><a href="#">Conditions générales de vente</a></li>
+                            <li><a href="#">Données et confidentialité</a></li>
+                        </ul>    
+                        <ul>Nos hébergements
+                            <li><a href="#">Charte qualité</a></li>
+                            <li> <a href="#">Soumettre votre hôtel</a></li>
+                        </ul>
+                        <ul>Assistance
+                            <li><a href="#">Centre d'aide</a></li>
+                            <li><a href="#">Nous contacter</a></li>
+                        </ul>  
                     </div>
                 </div>
             </footer>
