@@ -7,7 +7,7 @@ body {
     max-width: 1400px;
     margin: 0 auto;
     box-sizing: border-box;
-    padding: 0 3.8%;
+    padding: 0 3.5%;
 }
 
 header .wrapper {
@@ -47,25 +47,26 @@ nav a:hover {
 }
 
 .search-bar {
-height: 30%;
-display: block;
+    display: inline-block;
 }
 
 .search-bar form {
-    width: 407px;
     border: 1px solid #F2F2F2;
+    border-left: none;
+    border-right: none;
     border-radius: 15px;
     height: 47px;
+    width: 406px;
     display: flex;
     justify-content: flex-start;
-    overflow: hidden;
 }
 
 .search-bar .fa-location-dot {
     display: flex;
+    justify-content: center;
     align-items: center;
+    width: 53px;
     background-color: #F2F2F2;
-    padding: 0 5% 0 5%;
     border-radius: 15px 0 0 15px;
 }
 
@@ -76,21 +77,20 @@ display: block;
     font-family: "Raleway";
     outline: none;
     border: none;
-    font-size: 18px;
+    font-size: 17.5px;
     font-weight: 650;
     color: black;
-    height: 100%;
-    padding-left: 3%;
+    padding-left: 3.5%;
 }
 
 .search-bar [type=submit] {
     cursor: pointer;
     font-family: "Raleway";
-    font-size: 106%;
+    font-size: 17.5px;
     font-weight: 600;
     color: white;
-    height: 100%;
-    width: 170px;
+    height: calc(100% + 2px);
+    transform: translate(0 , -1px);
     padding: 0px 3% 0 3%;
     background-color: #0065FC;
     border: 4px solid #0065FC;
@@ -108,30 +108,28 @@ display: block;
 .filter-layout span {
     font-size: 18px;
     font-weight: 600;
-    margin-right: 3%;
+    padding-left: 5px;
+    padding-right: 31px;
 }
 
-.filter-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-}
 
 .filter-buttons div {
     display: flex;
     align-items: center;
-    margin-right: 2%;
-    height: 38px;
+    height: 44px;
     border: 2px solid #F2F2F2;
     border-left: none;
-    border-radius: 70px;
+    border-radius: 40px;
     cursor: pointer;
     overflow: visible;
 }
 
 .filter-buttons div span {
-    font-size: 17px;
+    font-size: 17.5px;
     font-weight: 600;
+    white-space: nowrap;
+    padding-left: 12px;
+    padding-right: 22px;
 }
 
 .filter-buttons div i {
@@ -141,8 +139,8 @@ display: block;
     color:#0065FC;
     overflow: visible;
     background-color: #DEEBFF;
-    height: 42px;
-    width: 42px;
+    height: 48px;
+    width: 48px;
     border-radius: 50%;
 }
 
@@ -172,9 +170,7 @@ display: block;
 .first-section .wrapper {
     display: flex;
     justify-content: space-between;
-    width: 96.5%;
-    padding: 0 0 0 3.5%;
-    margin: 0;
+    gap: 3%;
 }
 
 .main-board h1 {
@@ -188,20 +184,19 @@ display: block;
     display: flex;
     flex-flow: column;
     background-color: #F2F2F2;
-    width: calc(93% * 66/100);
-    height: 625px;
     padding-left: 3%;
     padding-right: 3%;
     border-radius: 25px;
+    width: calc(93% * 0.66);
 }
 
 .main-board .main-cards-layout {
     display: flex;
     flex-wrap: wrap;
-    padding-top: 20px;
-    height: 470px;
     justify-content: space-between;
     align-items: space-between;
+    padding-top: 20px;
+    width: 100%;
 }
 
 .main-board .vertical-card {
@@ -209,13 +204,13 @@ display: block;
     flex-direction: column;
     text-decoration: none;
     color: black;
-    width: 29.3%;
-    height: 184px;
     background-color: white;
     border-radius: 20px;
     border: 5px solid white;
     overflow: hidden;
     box-shadow: 0 4px 8px 0 rgba(116, 116, 116, 0.2);
+    width: 29.5%;
+    margin-bottom: 3.5%;
 }
 
 .vertical-card:hover {
@@ -224,25 +219,27 @@ display: block;
 }
 
 .vertical-card img {
-    height: 110px;
+    height: 112px;
     width: 100%;
     object-fit: cover;
 }
 
-.description {
-    padding-left: 4%;
+.vertical-card .description {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding-left: 4%;
 }
 
-.description h4 {
-    font-size: 16px;
+.vertical-card .location-price h4 {
+    font-size: 15.5px;
     font-weight: 600;
     padding-top: 3%;
     margin: 0;
 }
 
-.description p {
+.vertical-card .location-price p {
     font-size: 14px;
     font-weight: 300;
     padding-top: 1.5%;
@@ -250,12 +247,12 @@ display: block;
     margin: 0;
 }
 
-.description p span {
+.vertical-card .location-price p span {
     font-weight: 500;
 }
 
 .rating .fa-star {
-    color: #F2F2F2;
+    color: #dbdbdb;
 }
 
 .rating.stars1 i:nth-child(1) { color: #0065FC; }
@@ -278,11 +275,16 @@ display: block;
 .rating.stars5 i:nth-child(4) { color: #0065FC; }
 .rating.stars5 i:nth-child(5) { color: #0065FC; }
 
-.main-board a {
+.main-board span a {
     text-decoration: none;
     color: black;
     font-size: 18px;
     font-weight: 600;
+}
+
+.main-board span {
+    padding-top: 1.5%;
+    padding-bottom: 5.5%;
 }
 
 .side-board {
@@ -290,9 +292,7 @@ display: block;
     flex-direction: column;
     box-sizing: border-box;
     background-color: #F2F2F2;
-    box-sizing: border-box;
-    width: calc(93% * 34/100);
-    margin-left: 3%;
+    width: calc(93% * 0.34);
     padding-left: 2.75%;
     padding-right: 2.75%;
     border-radius: 25px;
@@ -330,8 +330,7 @@ display: block;
 }
 
 .horizontal-card img {
-    height: 140px;
-    width: 60%;
+    width: 40%;
     object-fit: cover;
 }
 
@@ -350,20 +349,22 @@ display: block;
     padding-left: 6%;
 }
 
-.location-price h4 {
+.horizontal-card .location-price h4 {
+    font-size: 15px;
     font-weight: 600;
     margin: 0;
 }
 
-.location-price p {
+.horizontal-card .location-price p {
     font-size: 14px;
     font-weight: 300;
     margin: 0;
 }
 
-.location-price p span {
+.horizontal-card .location-price p span {
     font-weight: 500;
 }
+
 
 .second-section h1 {
     margin: 0;
@@ -373,122 +374,105 @@ display: block;
     font-weight: 600;
 }
 
-.columns {
+.second-section .panel {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
     justify-content: space-between;
-    align-content: space-between;
-    height: 446px;
 }
 
-.columns img {
-    height: 95%;
-    width: 100%;
+.panel span {
+    width: 22.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.panel img {
     object-fit: cover;
 }
 
-.container0 {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    border-radius: 25px;
-    width: 23%;
-    height: 100%;
-    box-shadow: 0 8px 16px 0 rgba(116, 116, 116, 0.2);
+.panel a {
+    text-decoration: none;
+    color: black;
 }
 
-.container1 {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    border-radius: 25px;
-    width: 23%;
-    height: 53%;
-    box-shadow: 0 8px 16px 0 rgba(116, 116, 116, 0.2);
+.panel a:hover {
+    box-shadow: 0 5px 5px 7px #F2F2F2;
 }
 
-.container2 {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    border-radius: 25px;
-    width: 23%;
-    height: 37%;
-    box-shadow: 0 8px 16px 0 rgba(116, 116, 116, 0.2);
-}
-
-.container3 {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    border-radius: 25px;
-    width: 23%;
-    height: 100%;
-    box-shadow: 0 8px 16px 0 rgba(116, 116, 116, 0.2);
-}
-.container4 {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    border-radius: 25px;
-    width: 23%;
-    height: 43%;
-    box-shadow: 0 8px 16px 0 rgba(116, 116, 116, 0.2);
-}
-
-.container5 {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    border-radius: 25px;
-    width: 23%;
-    height: 47%;
-    box-shadow: 0 8px 16px 0 rgba(116, 116, 116, 0.2);
-}
-
-.columns h4 {
-    font-weight: 600;
+.panel a h4 {
+    font-size: 15.5px;
+    padding-left: 6%;
+    padding-top: 6.5%;
+    padding-bottom: 5.5%;
+    padding-right: 6%;
     margin: 0;
-    padding-left: 7%;
-    padding-top: 7%;
-    padding-bottom: 5%;
 }
 
-footer {
-    background-color: #F2F2F2;
-    margin-top: 4%;
-    padding-top: 3.5%;
-    height: 159px;
+.panel span a {
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 3px 3px 5px #F2F2F2;
+}
+
+.column-single {
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 3px 3px 5px #F2F2F2;
+}
+
+.column-single a img {
+    height: 378px;
+}
+
+.column-double span:first-child img {
+    height: 175px;
+}
+
+.column-double span:last-child img {
+    height: 105px;
+}
+
+.colunn-double-reverse span:first-child img {
+    height: 134px;
+}
+
+.colunn-double-reverse span:last-child img {
+    height: 148px;
 }
 
 footer .wrapper {
-    height: 100%;
-}
-.wrapper .footer-layout {
     display: flex;
-    height: 100%;
-    width: 100%;
+    background-color: #F2F2F2;
+    margin-top: 4%;
+    padding-top: 3%;
+    padding-bottom: 3.5%;
 }
 
 footer ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    width: calc(100%/3);
+}
+
+footer div {
+    padding-bottom: 4.5%;
     font-size: 17px;
     font-weight: 600;
-    width: calc(100%/3);
-    height: 100%;
 }
 
 footer li {
-    padding-top: 2.5%;
+    padding-bottom: 2.5%;
 }
 
 footer li a {
     text-decoration: none;
     color: black;
-    font-size: 15px;
+    font-size: 15.5px;
     font-weight: 200;
 }
 
@@ -497,14 +481,19 @@ footer li a {
 @media only screen and (max-width: 992px) {
 
     .first-section .wrapper {
-        display: flex;
         flex-direction: column-reverse;
+        gap: 0;
     }
 
     .side-board {
+        display: flex;
+        flex-direction: column;
+        box-sizing: 0;
+        background-color: #F2F2F2;
         width: 100%;
-        height: 270px;
-        margin: 0;
+        padding-left: 3%;
+        padding-right: 3%;
+        border-radius: 25px;
     }
 
     .side-board h1 {
@@ -519,13 +508,53 @@ footer li a {
 
     .side-board .side-cards-layout {
         flex-direction: row;
+        justify-content: space-between;
+        height: 100%;
         width: 100%;
     }
-
+ 
     .side-board .horizontal-card {
-        width: 33%;
+        flex-direction: column;
+        width: 29.5%;
+        height: 100%;
+        margin-bottom: 3.5%;
+    }
+    
+    .horizontal-card img {
+        width: 100%;
+        height: 112px;
+        object-fit: cover;
     }
 
+    .horizontal-card:hover {
+        color: #0065FC;
+        box-shadow: 0 8px 16px 0 rgba(116, 116, 116, 0.2);
+    }
+    
+    .horizontal-card .description {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        padding-bottom: 0;
+        padding-top: 0;
+        padding-right: 0;
+        padding-left: 4%;
+    }
+    
+    .horizontal-card .location-price h4 {
+        font-size: 15.5px;
+        padding-top: 3%;
+        margin: 0;
+    }
+    
+    .horizontal-card .location-price p {
+        font-size: 14px;
+        font-weight: 300;
+        margin: 0;
+        padding-top: 1.5%;
+        padding-bottom: 3px;
+    }
 
     .main-board {
         width: 94%;
