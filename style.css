@@ -1,3 +1,15 @@
+/* La structure du code css doit être conforme au choix technique d'un site "destop-first" et "responsive".
+Pour le responsive, le site doit s'adapter à toutes les tailles d'écran (desktop, tablette, mobile).
+Deux breakpoints facilitent cette adaptation: 992px et 768px.
+
+Trois parties principales :
+- Partie I : le style global et spécifique aux écrans de 993px et plus;
+- Partie II : le style spécifique aux écrans de 992px et moins
+- Partie III : le style spécifique aux écrans de 768px et moins */
+
+
+/* Partie I : style général et desktop */
+
 body {
     font-family: "Raleway", sans-serif;
     margin: 0;
@@ -9,6 +21,9 @@ body {
     margin: 0 auto;
     padding: 0 3.5%;
 }
+
+
+/* Le header comprenant le logo et le menu de navigation */
 
 header .wrapper {
     display: flex;
@@ -38,18 +53,27 @@ nav a:active {
     border-top: 2px #0065FC solid;
 }
 
-.search h1 {
+
+/* Deuxième section 
+   La barre de recherche et les filtres */
+
+.first-section h1 {
     margin: 0;
     padding-top: 2.5%;
-    font-size: 21px;
+    font-size: 21.5px;
     font-weight: 600;
 }
 
-.search p {
+.first-section p {
     margin-top: 6px;
     font-size: 16px;
     font-weight: 300;
 }
+
+/* La barre de recherche comprend trois élélents principaux alignés en display flex;
+- une icöne (location-dot)
+- une zone de recherche
+- un bouton pour lancer une recherche. */
 
 .search-bar {
     display: inline-block;
@@ -59,7 +83,6 @@ nav a:active {
     display: flex;
     justify-content: flex-start;
     height: 47px;
-    width: 406px;
     border: 1px solid #F2F2F2;
     border-left: none;
     border-right: none;
@@ -70,6 +93,7 @@ nav a:active {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-shrink: 0;
     width: 53px;
     background-color: #F2F2F2;
     border-radius: 15px 0 0 15px;
@@ -120,7 +144,7 @@ nav a:active {
 
 .filter-buttons {
     display: flex;
-    gap: 3%;
+    gap: 2%;
     width: 100%;
     flex-wrap: wrap;
 }
@@ -165,29 +189,38 @@ nav a:active {
     color: #0065FC;
 } 
 
+ /* Veiller à ce que la largeur de l'icône "info" ne diminue pas (shrink) en display flex */
+
 .info {
+    display: flex;
     padding-left: 8px;
     margin-bottom: 3%;
 }
 
-.fa-info {
-    box-sizing: border-box;
-    padding-top: 5px;
-    font-size: 12px;
-    text-align: center;
+.info div {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
     border: 1px solid #dbdbdb;
-    width: 25px;
-    height: 25px;
     border-radius: 50%;
     color:#0065FC;
+    text-align: center;
+    line-height: 20px;
+    font-size: 13px;
 }
 
 .info span {
+    width: 100%;
+    padding-top: 4px;
     font-size: 15.5px;
-    padding-left: 5px;
+    padding-left: 10px;
 }
 
-.first-section .wrapper {
+
+/* Deuxième section
+Les cartes ont des effets sur leurs bordures et la couleur de la police en hover */
+
+.second-section .wrapper {
     display: flex;
     justify-content: space-between;
     gap: 3%;
@@ -206,7 +239,7 @@ nav a:active {
 .main-board h1 {
     margin: 0;
     padding-top: 5.5%;
-    font-size: 21px;
+    font-size: 21.5px;
     font-weight: 600;
 }
 
@@ -214,7 +247,6 @@ nav a:active {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: space-between;
     padding-top: 20px;
     width: 100%;
 }
@@ -273,13 +305,22 @@ nav a:active {
     margin: 0;
 }
 
-.vertical-card .location-price p span {
+.vertical-card span {
     font-weight: 500;
+}
+
+.rating {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .rating .fa-star {
     color: #dbdbdb;
+    font-size: 11.5px;
 }
+
+/* Les étoiles ont une couleur de base. La classe "starsx" est utilisée pour remplacer la couleur d'un nombre spécifique d'étoiles */
 
 .rating.stars1 i:nth-child(1),
 .rating.stars2 i:nth-child(1),
@@ -300,7 +341,7 @@ nav a:active {
 .main-board span a {
     text-decoration: none;
     color: black;
-    font-size: 18px;
+    font-size: 17.5px;
     font-weight: 600;
 }
 
@@ -325,7 +366,7 @@ nav a:active {
     justify-content: space-between;
     margin: 0;
     padding-top: 13%;
-    font-size: 21px;
+    font-size: 21.5px;
     font-weight: 600;
     padding-bottom: 5px;
 }
@@ -389,15 +430,21 @@ nav a:active {
     margin: 0;
 }
 
-.horizontal-card .location-price p span {
+.horizontal-card span {
     font-weight: 500;
 }
 
-.second-section h1 {
+
+/* Troisième section 
+Les activités ont des effets sur leurs bordures et la couleur de la police en hover 
+Attention que les éléments de texte ne dépassent pas leurs containers. 
+Si besoin, couper le texte et afficher des points de suspension (ellipsis) */
+
+.third-section h1 {
     margin: 0;
-    padding-top: 50px;
-    padding-bottom: 25px;
-    font-size: 22px;
+    padding-top: 4.5%;
+    padding-bottom: 1.75%;
+    font-size: 21.5px;
     font-weight: 600;
 }
 
@@ -424,10 +471,12 @@ nav a:active {
 }
 
 .panel a:hover {
+    color: #0065FC;
     box-shadow: 0 3px 10px 4px #dbdbdb;
 }
 
 .panel a:active {
+    color: #0065FC;
     box-shadow: 0 3px 10px 4px #dbdbdb;
 }
 
@@ -512,16 +561,20 @@ footer .wrapper {
 
 
 
+/* Partie II : style spécifique aux écrans de 768px et moins */
+
 @media only screen and (max-width: 992px) {
 
-    .first-section .wrapper {
+
+    /* Les cardes horizontales passent au-dessus des cartes centrales et leur style reprend celui des cartes verticales */
+
+    .second-section .wrapper {
         flex-direction: column-reverse;
     }
 
     .main-board {
         box-sizing: border-box;
         background-color: white;
-        border-radius: none;
         width: 100%;
     }
 
@@ -575,6 +628,9 @@ footer .wrapper {
         padding-top: 1.5%;
         padding-bottom: 3px;
     }
+
+
+    /* Les activités passent à trois colonnes au lieu de quatre */
     
     .panel {
         flex-wrap: wrap;
@@ -587,12 +643,18 @@ footer .wrapper {
 }
 
 
+
+/* Partie III : style spécifique aux écrans de 768px et moins.
+Attention à bien diminuer la taille de la police pour que les éléments de texte ne sortent pas de leurs containers */
+
 @media only screen and (max-width: 768px) {
-/* For mobile phones: */
 
     .wrapper {
         padding: 0 5.5%;
     }
+
+
+    /* Le manu de navigation passe en-dessous du logo */
 
     header .wrapper {
         flex-direction: column;
@@ -632,12 +694,12 @@ footer .wrapper {
         border-top: none;
     }
 
-    .search h1 {
+    .first-section h1 {
         font-size: 18.5px;
         padding-top: 9%;
     }
 
-    .search p {
+    .first-section p {
         margin-top: 4%;
         margin-bottom: 9%;
         font-size: 14px;
@@ -649,6 +711,7 @@ footer .wrapper {
 
     .search-bar form {
         width: 100%;
+        max-width: 500px;
         height: 42px;
     }
 
@@ -662,6 +725,7 @@ footer .wrapper {
     }
 
     .search-bar .fa-location-dot {
+        flex-shrink: initial;
         font-size: 14px;
         padding: 0 2% 0 1.5%;
     }
@@ -709,21 +773,30 @@ footer .wrapper {
     }
 
     .info {
+        margin-top: 5%;
+        margin-bottom: 11%;
         padding-left: 0;
+
     }
 
-    .fa-info {
+    .info div {
         font-size: 10px;
-        width: 20px;
-        height: 20px;
+        width: 18px;
+        height: 18px;
+        line-height: 18px;
     }
 
     .info span {
         font-size: 13.5px;
+        padding-top: 3px;
     }
 
-    .first-section .wrapper {
+    .second-section .wrapper {
         padding: 0 0;
+    }
+
+    .rating .fa-star {
+        font-size: 10px;
     }
 
     .side-board {
@@ -751,7 +824,7 @@ footer .wrapper {
         flex-direction: row;
         width: 100%;
         height: 123px;
-        border: 4px solid white;
+        border-width: 4px;
     }
 
     .horizontal-card img {
@@ -773,10 +846,6 @@ footer .wrapper {
 
     .horizontal-card .location-price p {
         font-size: 12px;
-    }
-
-    .horizontal-card .fa-star {
-        font-size: 10px;
     }
 
     .main-board {
@@ -801,7 +870,7 @@ footer .wrapper {
     .vertical-card {
         box-sizing: border-box;
         width: 100%;
-        border: 4px solid white;
+        border-width: 4px;
     }
 
     .vertical-card img {
@@ -815,10 +884,6 @@ footer .wrapper {
 
     .vertical-card .location-price p {
         font-size: 12px;
-    }
-
-    .vertical-card .fa-star {
-        font-size: 10px;
     }
 
     .main-board span a {
@@ -835,7 +900,7 @@ footer .wrapper {
         padding-bottom: 3%;
     }
 
-    .second-section h1 {
+    .third-section h1 {
         font-size: 19px;
         padding-top: 15%;
         padding-bottom: 8%;
